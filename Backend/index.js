@@ -130,19 +130,6 @@ app.get('/medicines',(req,res)=>{
     res.json(medicines)
 })
 
-// app.post('/doctors', (req,res)=>{
-//     const doctor = {
-//         id: arrayOfDocs.length +1,
-//         name: req.body.name,
-//         degree:req.body.degree,
-//         expYears:req.body.expYears,
-//         hospital:req.body.hospital,
-//         achievements: req.body.achievements
-//     };
-//     arrayOfDocs.push(doctor);
-//     res.send(doctor);
-// })
-
 
 app.get('/doctors/:id',(req,res)=>{
     const id = req.params.id;
@@ -152,21 +139,5 @@ app.get('/doctors/:id',(req,res)=>{
     }
     res.send(doctor)
 })
-
-
-
-
-
-
-// What i want--
-
-// 1.List of doctors
-// 2.Details of doctor from backend
-// 3.Detail of 1 doctor
-// 4.Alert of medicines
-
-
-// Two parameters - Route parameters = :id(To see use req.params)
-//                  Query parameters = groupBy = name(to see use req.query)
 
 app.listen(port,()=> console.log(`Listening to port ${port}...`));
